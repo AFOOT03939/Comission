@@ -1,0 +1,804 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: #f4f4f4;
+  background-image: linear-gradient(rgba(255, 102, 196, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 102, 196, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  min-height: 100vh;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.main-title {
+  font-family: "Chewy", cursive;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 
+  3px 3px 0px #ff66c4, 
+  -1px -1px 0px #ff66c4, 
+  1px -1px 0px #ff66c4, 
+  -1px 1px 0px #ff66c4, 
+  1px 1px 0px#ff66c4;
+  margin-bottom: 10px;
+  transform: rotate(-2deg);
+}
+
+#discord {
+  background: url(Images/discord.png);
+  background-size: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#deviantArt {
+  background: url(Images/deviantArt.png);
+  background-size: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#kofi {
+  background: url(Images/ko-Fi.png);
+  background-size: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.social-networks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+  flex-wrap: wrap;
+}
+
+.social-networks {
+  background: #fff;
+  border: 2px solid #ff66c4;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(255, 102, 196, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-networks:hover {
+  transform: translateY(-5px);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ff66c4;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-n-link {
+  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+/* Simplified and more specific selectors to override Bootstrap completely */
+.nav-n-link > a.nav,
+.nav-n-link > a.nav:link,
+.nav-n-link > a.nav:visited {
+  background: #fff;
+  border: 2px solid #ff66c4;
+  border-radius: 50px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 102, 196, 0.2);
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* More specific hover selector that works with Bootstrap and flexbox */
+.nav-n-link > a.nav:hover,
+.nav-n-link > a.nav:focus,
+.nav-n-link > a.nav:active {
+  background: #ff66c4;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 102, 196, 0.3);
+  text-decoration: none;
+  border-color: #ff66c4;
+  outline: none;
+}
+
+/* Override Bootstrap's default link styles specifically */
+.nav-n-link > a.nav:not(:hover):not(:focus):not(:active) {
+  color: #333;
+}
+
+/* Carrousel*/
+#carouselExampleIndicators {
+  width: 100%;
+  max-width: 800px;
+  height: 250px;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #ff66c4;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(255, 102, 196, 0.2);
+}
+
+.carousel-item {
+  padding: 15px;
+}
+
+.carousel-item p {
+  width: 100%;
+  max-width: 40vw;
+  margin: 40px auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 40px auto;
+}
+
+#tagCarousel {
+  position: absolute;
+  width: clamp(200px, 30vw, 300px);
+  left: 50%;
+  transform: translateX(-50%);
+  top: -35px;
+  z-index: 1;
+}
+
+#tagCarousel + p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -18px;
+  color: #ffffff;
+  font-family: "Chewy", cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 10px;
+  z-index: 2;
+  text-shadow: 3px 3px 0px #ff66c4, -1px -1px 0px #ff66c4, 1px -1px 0px #ff66c4, -1px 1px 0px #ff66c4, 1px 1px 0px
+    #ff66c4;
+}
+
+.carousel-indicators button {
+  background-color: #ff66c4;
+}
+
+.carousel-indicators .active {
+  background-color: #ff66c4;
+}
+
+/* Announcement Box */
+.announcement {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #ff66c4;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 102, 196, 0.2);
+}
+
+h3 {
+  color: #ff66c4;
+  font-family: "Chewy", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.announcement h3 {
+  color: #ff66c4;
+  font-family: "Chewy", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Commission Status Section */
+.section {
+  margin: 50px;
+}
+
+.section-title {
+  font-family: "Chewy", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #ff66c4;
+  border-radius: 2px;
+}
+
+/* Status Grid */
+#prices-title{
+  margin-bottom: -35px;
+  font-family: "Chewy", cursive;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 
+  3px 3px 0px #ff66c4, 
+  -1px -1px 0px #ff66c4, 
+  1px -1px 0px #ff66c4, 
+  -1px 1px 0px #ff66c4, 
+  1px 1px 0px#ff66c4;
+}
+
+#drawings-comics{
+  font-family: "Chewy", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.price-card {
+  height: auto;
+  min-height: 280px;
+  border-radius: 20px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+#price-card-1 {
+  border: 3px solid #4caf50;
+}
+
+#price-card-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+}
+
+#price-card-2 {
+  border: 3px solid #2196f3;
+}
+
+#price-card-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #2196f3, #42a5f5);
+}
+
+#price-card-3 {
+  border: 3px solid #ff9800;
+}
+
+#price-card-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #ff9800, #ffa726);
+}
+
+.price-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.price-card-header {
+  padding: 25px 20px 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.price-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  animation: float 3s ease-in-out infinite;
+}
+
+.price-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #2d3748;
+  font-family: "Chewy", cursive;
+}
+
+.price-subtitle {
+  font-size: 0.9rem;
+  color: #718096;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.price-container {
+  background: linear-gradient(135deg, #fff, #f8fafc);
+  border: none;
+  margin: 20px;
+  border-radius: 15px;
+  font-weight: 700;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+#price-card-1 .price-container {
+  border: 2px solid #4caf50;
+  color: #4caf50;
+}
+
+#price-card-2 .price-container {
+  border: 2px solid #2196f3;
+  color: #2196f3;
+}
+
+#price-card-3 .price-container {
+  border: 2px solid #ff9800;
+  color: #ff9800;
+}
+
+.price-currency {
+  font-size: 1.2rem;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Enhanced hover animations */
+.price-card:hover .price-icon {
+  animation: bounce 0.6s ease;
+}
+
+/* Comission Status */
+
+.status-container{
+  margin-top: 10px;
+}
+
+.status-container .row .card{
+  margin-left: 15px;
+  height: 500px;
+  width: 160px;
+  display: flex;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+.status-subtitle-top{
+  font-family: "Chewy", cursive;
+  margin-top: 55px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.status-subtitle-top:nth-of-type(3) {
+  margin-top: 40px;
+}
+
+.status-slots{
+  font-family: "Chewy", cursive;
+  margin-right: 30px;
+  font-size: 1.5rem;
+}
+
+.status-title{
+  font-family: "Chewy", cursive;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.status-subtitle{
+  padding: 5px;
+  color: #ff66c4;
+}
+
+.status-subtitle p{
+  margin-bottom: 0px !important;
+}
+
+.status-costumer{
+  border-radius: 5px;
+  border: 1px dashed #ff66c4;
+  height: 185px;
+  padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.status-slots{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.costumer {
+  background-color: white;
+  border: none;
+  border-left: 4px solid black;
+  border-radius: 5px;
+  height: 39px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+
+  display: flex;         
+  align-items: center;    
+  padding-left: 5px;       
+}
+
+.costumer p {
+  margin: 0;           
+}
+
+
+/* CARD 1 - Confirmed 💰 */
+.status-container .row .card:nth-child(1) {
+  border: 2px solid #81c784;
+  border-top: 10px solid #81c784;
+}
+
+.status-container .row .card:nth-child(1) .status-subtitle {
+    color: #388e3c;
+}
+
+.status-container .row .card:nth-child(1) .status-costumer {
+  border: 1px dashed #388e3c;
+}
+
+/* CARD 2 - Sketching ✏️ */
+.status-container .row .card:nth-child(2) {
+  border: 2px solid #ffb74d;
+  border-top: 10px solid #ffb74d;
+}
+
+.status-container .row .card:nth-child(2) .status-subtitle {
+  color: #fb8c00;
+}
+
+.status-container .row .card:nth-child(2) .status-costumer {
+  border: 1px dashed #fb8c00;
+}
+
+/* CARD 3 - Lineart 🖊️ */
+.status-container .row .card:nth-child(3) {
+  border: 2px solid #64b5f6;
+    border-top: 10px solid #64b5f6;
+}
+
+.status-container .row .card:nth-child(3) .status-subtitle {
+  color: #1976d2;
+}
+
+.status-container .row .card:nth-child(3) .status-costumer {
+    border: 1px dashed #1976d2;
+}
+
+/* CARD 4 - Coloring 🎨 */
+.status-container .row .card:nth-child(4) {
+  border: 2px solid #fff176;
+  border-top: 10px solid #fff176;
+}
+
+.status-container .row .card:nth-child(4) .status-subtitle {
+  color: #fbc02d;
+}
+
+.status-container .row .card:nth-child(4) .status-costumer {
+  border: 1px dashed #fbc02d;
+}
+
+/* CARD 5 - Refine ✨ */
+.status-container .row .card:nth-child(5) {
+  border: 2px solid #ba68c8;
+  border-top: 10px solid #ba68c8;
+}
+
+.status-container .row .card:nth-child(5) .status-subtitle {
+  color: #8e24aa;
+}
+
+.status-container .row .card:nth-child(5) .status-costumer {
+  border: 1px dashed #8e24aa;
+}
+
+/* CARD 6 - Finished 🎉 */
+.status-container .row .card:nth-child(6) {
+  border: 2px solid #81c784;
+  border-top: 10px solid #81c784;
+}
+
+.status-container .row .card:nth-child(6) .status-subtitle {
+    color: #388e3c;
+}
+
+.status-container .row .card:nth-child(6) .status-costumer {
+  border: 1px dashed #388e3c;
+}
+
+/* CARD 1 - Confirmed 💰 */
+.status-container .row .card:nth-child(1) .costumer {
+  border: 2px solid #388e3c;
+  border-left: 4px solid #388e3c;
+}
+
+/* CARD 2 - Sketching ✏️ */
+.status-container .row .card:nth-child(2) .costumer {
+  border: 2px solid #fb8c00;
+  border-left: 4px solid #fb8c00;
+}
+
+/* CARD 3 - Lineart 🖊️ */
+.status-container .row .card:nth-child(3) .costumer {
+  border: 2px solid #1976d2;
+  border-left: 4px solid #1976d2;
+}
+
+/* CARD 4 - Coloring 🎨 */
+.status-container .row .card:nth-child(4) .costumer {
+  border: 2px solid #fbc02d;
+  border-left: 4px solid #fbc02d;
+}
+
+/* CARD 5 - Refine ✨ */
+.status-container .row .card:nth-child(5) .costumer {
+  border: 2px solid #8e24aa;
+  border-left: 4px solid #8e24aa;
+}
+
+/* CARD 6 - Finished 🎉 */
+.status-container .row .card:nth-child(6) .costumer {
+  border: 2px solid #388e3c;
+  border-left: 4px solid #388e3c;
+}
+
+/* Price Section */
+.price-section {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #ff66c4;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 0 6px 20px rgba(255, 102, 196, 0.2);
+}
+
+/* Terms Section */
+.terms-section {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px dashed #ff66c4;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 40px 0;
+}
+
+.terms-section h3 {
+  color: #ff66c4;
+  font-family: "Chewy", cursive;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.terms-list {
+  list-style: none;
+}
+
+.terms-list li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.terms-list li::before {
+  content: "💖";
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.decoration {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: float 3s ease-in-out infinite;
+}
+
+.decoration:nth-child(odd) {
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.decoration {
+  position: absolute;  /* o fixed si quieres que se queden al hacer scroll */
+  z-index: -1;         /* debajo de todo */
+  pointer-events: none; /* no bloquea clicks */
+}
+
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .social-networks {
+    margin-top: -30px;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .social-networks-container {
+    margin-top: -70px;
+  }
+
+  .nav-n-link {
+    gap: 10px;
+  }
+
+  .nav-n-link > a.nav {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .status-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #carouselExampleIndicators {
+    height: 220px;
+    min-height: 200px;
+  }
+
+  .carousel-item p {
+    margin: 20px auto;
+    font-size: 0.8rem;
+  }
+
+  .carousel-item img {
+    margin-top: 20px;
+  }
+
+  #tagCarousel {
+    width: 200px;
+    top: -25px;
+  }
+
+  #tagCarousel + p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 4.5rem;
+  }
+
+  .social-networks {
+    margin-top: 0px;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .social-networks-container {
+    margin-top: -70px;
+  }
+
+  .nav-n-link > a.nav {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-n-link > a.nav,
+  .nav-n-link > a.nav:link,
+  .nav-n-link > a.nav:visited {
+    padding: 6px 10px;
+  }
+
+  .carousel-item p {
+    max-width: 70vw;
+    margin: 20px auto;
+    font-size: 0.8rem;
+  }
+}
